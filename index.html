@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/carbon-components@10.20.0/css/carbon-components.min.css">
+
+  <!-- <script src="https://d3js.org/d3.v6.min.js"></script> -->
+  <script src="http://d3js.org/d3.v5.min.js"></script>
+<script src="https://d3js.org/d3-array.v2.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+
+</head>
+
+<body>
+  <div id="title">OS Matrix</div>
+          <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <!--Sidenave conetent-->
+
+            
+
+        <!--Sidenave conetent Ends--> 
+        </div>
+  
+  <div id="filterPanel">  
+    <div class="bx--form-item">  
+      <div class="bx--dropdown__wrapper ">
+        <span id="example-ap3t91wclrj-label" class="bx--label">Select platform</span>
+        <div data-dropdown data-value class="bx--dropdown   ">
+          <button class="bx--dropdown-text" aria-haspopup="true" aria-expanded="false" aria-controls="example-ap3t91wclrj-menu" aria-labelledby="example-ap3t91wclrj-label example-ap3t91wclrj-value" type="button">
+            <span class="bx--dropdown-text__inner" id="example-ap3t91wclrj-value"> iOS</span>
+            <span class="bx--dropdown__arrow-container">
+              <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--dropdown__arrow" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"></path></svg>
+            </span>
+          </button>
+          <ul class="bx--dropdown-list" id="example-ap3t91wclrj-menu" role="menu" tabindex="0" id="example-ap3t91wclrj-menu" aria-hidden="true" wh-menu-anchor="left" aria-labelledby="example-ap3t91wclrj-label">
+            <li data-option data-value="all" class="bx--dropdown-item" title="Option 1">
+              <a class="bx--dropdown-link" href="javascript:void(0)" tabindex="-1" role="menuitemradio" aria-checked="true" id="example-ap3t91wclrj-item0">iOS</a>
+            </li>
+            <li data-option data-value="cloudFoundry" class="bx--dropdown-item" title="Option 2">
+              <a class="bx--dropdown-link" href="javascript:void(0)" tabindex="-1" role="menuitemradio" aria-checked="false" id="example-ap3t91wclrj-item1">Windows</a>
+            </li>
+            <li data-option data-value="cloudFoundry" class="bx--dropdown-item" title="Option 2">
+              <a class="bx--dropdown-link" href="javascript:void(0)" tabindex="-1" role="menuitemradio" aria-checked="false" id="example-ap3t91wclrj-item1">Android</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="bx--dropdown__wrapper">
+        <span id="example-ap3t91wclrj-label" class="bx--label">Select feature</span>
+        <div data-dropdown data-value class="bx--dropdown   ">
+          <button class="bx--dropdown-text" aria-haspopup="true" aria-expanded="false" aria-controls="example-ap3t91wclrj-menu" aria-labelledby="example-ap3t91wclrj-label example-ap3t91wclrj-value" type="button">
+            <span class="bx--dropdown-text__inner" id="example-ap3t91wclrj-value"> Select</span>
+            <span class="bx--dropdown__arrow-container">
+              <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--dropdown__arrow" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"></path></svg>
+            </span>
+          </button>
+          <ul class="bx--dropdown-list" id="example-ap3t91wclrj-menu" role="menu" tabindex="0" id="example-ap3t91wclrj-menu" aria-hidden="true" wh-menu-anchor="left" aria-labelledby="example-ap3t91wclrj-label">
+            <li data-option data-value="cloudFoundry" class="bx--dropdown-item" title="Option 0">
+              <a class="bx--dropdown-link" href="javascript:filter(0)" tabindex="-1" role="menuitemradio" aria-checked="false" id="example-ap3t91wclrj-item1">Select</a>
+            </li>
+            <li data-option data-value="all" class="bx--dropdown-item" title="Option 1">
+              <a class="bx--dropdown-link" href="javascript:filter(1)" tabindex="-1" role="menuitemradio" aria-checked="true" id="example-ap3t91wclrj-item0">User enrollment</a>
+            </li>
+            <li data-option data-value="cloudFoundry" class="bx--dropdown-item" title="Option 2">
+              <a class="bx--dropdown-link" href="javascript:filter(2)" tabindex="-1" role="menuitemradio" aria-checked="false" id="example-ap3t91wclrj-item1">DEP</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<div id="dataBox">
+  <div id="matrix">
+  </div>
+  <div id="rec1">  
+      <div  class="titleMain1">Total iOS devices</div>
+      <div id="totalDevices"class="ScrDesc">7490</div>
+        <div class="titleMain1">Corporate owned</div>
+      <div class="ScrDesc">5975</div>
+        <div class="titleMain1">Employee owned</div>
+      <div class="ScrDesc">3429</div>
+        <div class="titleMain1">Others</div>
+      <div class="ScrDesc">523</div>
+      <br/>
+  </div>
+  <div id="rec2">  
+      <div class="titleMain1">Devices that support this feature (iOS)</div>
+            <div class="ScrTitle ScrDesc">68%</div>
+            <!--Progress indicator 68%-->
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width:68% ; background-color:#7af !important;"></div>
+              </div>
+            <!--Progress indicator ends-->
+            <div class="helpertxt">2k/3.5k</div><br>
+
+            <!--CO-->
+            <div class="titleMain1">Corporate owned</div>
+            <div class="ScrTitle ScrDesc">80%</div>
+            <!--Progress indicator 80%-->
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width:80% ; background-color:#7af !important;"></div>
+              </div>
+            <!--Progress indicator ends-->
+            <div class="helpertxt">1.4k/2k</div><br>
+            <!--CO ends-->
+
+            <!--PO-->
+            <div class="titleMain1">Employee owned</div>
+            <div class="ScrTitle ScrDesc">30%</div>
+            <!--Progress indicator 30%-->
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width:30% ; background-color:#7af !important;"></div>
+              </div>
+            <!--Progress indicator ends-->
+            <div class="helpertxt">0.3k/1k</div><br>
+
+            <!--PO ends-->
+
+            <!--other-->
+            <div class="titleMain1">Others</div>
+            <div class="ScrTitle">75%</div>
+            <!--Progress indicator 75%-->
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width:75% ; background-color:#7af !important;"></div>
+              </div>
+            <!--Progress indicator ends-->
+            <div class="helpertxt">0.3k/0.4k</div>
+
+            <!--other ends-->
+      <br/>
+  </div>
+</div>
+
+</body>
+
+  <script src="js/matrix.js"></script>
+  <script src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js"></script>
+
+</html>

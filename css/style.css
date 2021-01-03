@@ -1,0 +1,150 @@
+body{
+	background-color: #f2f4f8 !important;
+	padding-left: 100px !important;
+	padding-right: 100px !important;
+}
+
+#title {
+	font-size: 28px !important;
+	margin: 24px !important;
+}
+
+#filterPanel, #matrix {
+	background: #fff;
+	padding: 48px;
+	margin-bottom: 16px;
+}
+
+.tick{
+	font-size: 14px;
+}
+
+.domain{
+	display: none;
+}
+
+svg {
+	padding-left: 200px;
+	overflow: visible !important;
+}
+
+.bx--form-item{
+	display: inline-block !important;
+	-webkit-box-orient: horizontal !important;
+}
+
+.bx--dropdown__wrapper{
+	width: 200px !important;
+	margin-right: 24px !important;
+	float: left !important;
+}
+
+.blockText {
+	display: inline-block;
+
+}
+
+#matrix{
+	display: inline-block;
+	float: left;
+	width: 79%;
+}
+
+#rec1, #rec2 {
+	min-height: 800px;
+	float: right;
+	background-color: #fff;
+	width: 20%;	  
+  }
+#rec2{
+	display: none;
+}
+  
+  .ScrTitle
+  {
+	  margin:10% 10% 5% 10%;
+	  color:#565656;
+	  font-size : 14px;
+	  }
+	   .ScrTitle1
+  {
+	  margin:10% 10% 5% 10%;
+	  color:#565656;
+	  color : #787A78;
+	  font-size : 14px;
+	  }
+	  
+.ScrDesc {
+	margin:2% 10% 5% 10%;
+	font-size : 22px;
+	color: #171717;
+	}	
+
+.sidenav {
+  height: 100%;
+  width: 350px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  display: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  font-size: 25px;
+  max-width: 350px;
+  color: #818181;
+  transition: 0.3s;
+  float: right;
+  position: absolute;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.titleMain
+{
+	margin:10% 10% 5% 10%;
+	font-size : 20px;
+	color : #252525;
+	font-weight: 400;
+	}
+.titleMain1
+	{
+	margin:10% 10% 5% 10%;
+	font-size : 16px;
+	color : #787A78;
+}
+	
+
+	
+.helpertxt
+	{
+		float:right;
+		margin-right:10%;
+		margin-bottom:15%
+		}
+.bg-success {
+	background-color: #7af!important;
+}
+.progress
+{
+	margin-left:10%;
+	margin-right:10%;
+	
+}  
